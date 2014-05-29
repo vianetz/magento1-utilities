@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+        <!-- remove security check for app/etc/local.xml file which causes errors in the Apache log ("client denied by server configuration")
+             @see https://www.yireo.com/tutorials/magento/magento-administration/1322-client-denied-by-server-configuration-appetclocalxml -->
+        <remove name="notification_security" />
+        <remove name="notification_survey" />
+    </default>
+</layout>

@@ -1,0 +1,53 @@
+<config>
+    <tabs>
+        <vianetz translate="label">
+            <label>vianetz modules</label>
+            <sort_order>200</sort_order>
+        </vianetz>
+    </tabs>
+    <sections>
+        <vianetz_utilities translate="label">
+            <label>General Settings</label>
+            <tab>vianetz</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <cache_block translate="label">
+                    <label>Cache: block cache configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>801</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cache_navigation_lifetime translate="label comment">
+                            <label>Cache lifetime navigation block</label>
+                            <comment>
+                                <![CDATA[Cache lifetime in seconds (time to live cache, "0" for deactivating the cache, "9999999999" for endless cache time)]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cache_navigation_lifetime>
+                        <cache_product_list_lifetime translate="label comment">
+                            <label>Cache lifetime product list block</label>
+                            <comment>
+                                <![CDATA[Cache lifetime in seconds (time to live cache, "0" for deactivating the cache, "9999999999" for endless cache time)]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cache_product_list_lifetime>
+                    </fields>
+                </cache_block>
+            </groups>
+        </vianetz_utilities>
+    </sections>
+</config>

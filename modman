@@ -1,0 +1,3 @@
+src/app/code/local/Vianetz/Utilities                                    app/code/local/Vianetz/Utilities
+src/app/etc/modules/Vianetz_Utilities.xml                               app/etc/modules/Vianetz_Utilities.xml
+src/app/design/adminhtml/default/default/layout/vianetz_utilities.xml   app/design/adminhtml/default/default/layout/vianetz_utilities.xml
