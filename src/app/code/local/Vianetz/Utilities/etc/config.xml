@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Vianetz_Utilities>
-			<version>1.0.3</version>
+			<version>1.0.4</version>
 		</Vianetz_Utilities>
 	</modules>
     <global>
