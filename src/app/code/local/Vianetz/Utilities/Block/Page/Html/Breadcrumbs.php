@@ -42,14 +42,15 @@ class Vianetz_Utilities_Block_Page_Html_Breadcrumbs extends Mage_Page_Block_Html
     }
 
     /**
-     * Returns a unique cache key
+     * Returns a unique cache key.
+     *
+     * We do not ignore query params to make the breadcrumbs dynamic for search, filtering.
      *
      * @return string unique cache resource identifier
      */
     public function getCacheKey()
     {
         $cacheResourceIdentifier = $this->getTemplate() . '_' . self::CACHE_KEY_EXTENSION;
-        // Also ignore query params for cache key.
-        return Mage::helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, true);
+        return Mage::helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, false);
     }
 }
