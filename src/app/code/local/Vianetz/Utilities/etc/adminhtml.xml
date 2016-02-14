@@ -12,7 +12,7 @@
                             <config>
                                 <children>
                                     <vianetz_utilities>
-                                        <title>Vianetz Utilities</title>
+                                        <title>Vianetz Utilities General Settings</title>
                                     </vianetz_utilities>
                                 </children>
                             </config>
