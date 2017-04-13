@@ -15,7 +15,7 @@
  * @package     Vianetz_Utilities
  * @author      Christoph Massmann, <C.Massmann@vianetz.com>
  * @link        http://www.vianetz.com
- * @copyright   Copyright (c) 2006-14 vianetz - C. Massmann (http://www.vianetz.com)
+ * @copyright   Copyright (c) since 2006 vianetz - C. Massmann (http://www.vianetz.com)
  * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU GENERAL PUBLIC LICENSE
  */
 class Vianetz_Utilities_Helper_Array extends Mage_Core_Helper_Abstract
