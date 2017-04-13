@@ -28,7 +28,7 @@ class Vianetz_Utilities_Block_Catalog_Product_List extends Mage_Catalog_Block_Pr
     const CACHE_KEY_EXTENSION = 'productListBlock';
 
     /**
-     * Constructor overwriting parent construct for adding a cache lifetime (if configured)
+     * Constructor overwriting parent construct for adding a cache lifetime (if configured).
      *
      * @return void
      */
@@ -36,11 +36,9 @@ class Vianetz_Utilities_Block_Catalog_Product_List extends Mage_Catalog_Block_Pr
     {
         parent::_construct();
 
-        $this->addData(
-            array(
-                 'cache_lifetime' => Mage::getStoreConfig('vianetz_utilities/cache_block/cache_product_list_lifetime')
-            )
-        );
+        if (empty($this->getConfiguredCacheLifetime()) === false) {
+            $this->addData(array('cache_lifetime' => $this->getConfiguredCacheLifetime()));
+        }
     }
 
     /**
@@ -51,6 +49,14 @@ class Vianetz_Utilities_Block_Catalog_Product_List extends Mage_Catalog_Block_Pr
     public function getCacheKey()
     {
         $cacheResourceIdentifier = $this->getTemplate() . '_' . self::CACHE_KEY_EXTENSION;
-        return Mage::helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier);
+        return $this->helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier);
+    }
+
+    /**
+     * @return string
+     */
+    private function getConfiguredCacheLifetime()
+    {
+        return Mage::getStoreConfig('vianetz_utilities/cache_block/cache_product_list_lifetime');
     }
 }

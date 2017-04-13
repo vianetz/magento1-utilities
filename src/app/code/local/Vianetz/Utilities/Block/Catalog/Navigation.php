@@ -21,28 +21,26 @@
 class Vianetz_Utilities_Block_Catalog_Navigation extends Mage_Catalog_Block_Navigation
 {
     /**
-     * Defines unique caching group for navigation block output
+     * Defines unique caching group for navigation block output.
      *
      * @var string
      */
     const CACHE_KEY_EXTENSION = 'navigationBlock';
 
     /**
-     * Constructor overwriting parent construct for adding a cache lifetime (if configured)
+     * Constructor overwriting parent construct for adding a cache lifetime (if configured).
      */
     protected function _construct()
     {
         parent::_construct();
 
-        $this->addData(
-            array(
-                 'cache_lifetime' => Mage::getStoreConfig('vianetz_utilities/cache_block/cache_navigation_lifetime')
-            )
-        );
+        if (empty($this->getConfiguredCacheLifetime()) === false) {
+            $this->addData(array('cache_lifetime' => $this->getConfiguredCacheLifetime()));
+        }
     }
 
     /**
-     * Returns a unique cache key
+     * Returns a unique cache key.
      *
      * @return string unique cache resource identifier
      */
@@ -50,6 +48,14 @@ class Vianetz_Utilities_Block_Catalog_Navigation extends Mage_Catalog_Block_Navi
     {
         $cacheResourceIdentifier = $this->getTemplate() . '_' . self::CACHE_KEY_EXTENSION;
         // Also ignore query params for cache key.
-        return Mage::helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, true);
+        return $this->helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, true);
+    }
+
+    /**
+     * @return string
+     */
+    private function getConfiguredCacheLifetime()
+    {
+        return Mage::getStoreConfig('vianetz_utilities/cache_block/cache_navigation_lifetime');
     }
 }

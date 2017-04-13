@@ -34,11 +34,9 @@ class Vianetz_Utilities_Block_Page_Html_Breadcrumbs extends Mage_Page_Block_Html
     {
         parent::_construct();
 
-        $this->addData(
-            array(
-                'cache_lifetime' => Mage::getStoreConfig('vianetz_utilities/cache_block/cache_navigation_lifetime')
-            )
-        );
+        if (empty($this->getConfiguredCacheLifetime()) === false) {
+            $this->addData(array('cache_lifetime' => $this->getConfiguredCacheLifetime()));
+        }
     }
 
     /**
@@ -51,6 +49,14 @@ class Vianetz_Utilities_Block_Page_Html_Breadcrumbs extends Mage_Page_Block_Html
     public function getCacheKey()
     {
         $cacheResourceIdentifier = $this->getTemplate() . '_' . self::CACHE_KEY_EXTENSION;
-        return Mage::helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, false);
+        return $this->helper('vianetz_utilities/cache')->getCacheKey($cacheResourceIdentifier, false);
+    }
+
+    /**
+     * @return string
+     */
+    private function getConfiguredCacheLifetime()
+    {
+        return Mage::getStoreConfig('vianetz_utilities/cache_block/cache_navigation_lifetime');
     }
 }
