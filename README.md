@@ -3,7 +3,6 @@ Vianetz Utilities Extension for Magento
 
 Facts
 -----
-- version: 1.0.4
 - extension key: Vianetz_Utilities
 
 Description
@@ -26,7 +25,7 @@ Compatibility
 
 Installation Instructions
 -------------------------
-For installation notes please see also http://www.vianetz.com/en/faq/how-to-install-the-magento-extension.html.
+For installation notes please see also [our FAQ](https://www.vianetz.com/en/faq/how-to-install-the-magento-extension.html).
 
 1. Do a backup of your Magento installation for safety reasons.
 2. Disable Magento compilation feature (if activated): System->Tools->Compiler
@@ -38,15 +37,15 @@ For installation notes please see also http://www.vianetz.com/en/faq/how-to-inst
 6. Enable the Magento compilation feature (if it was activated before): System->Tools->Compiler
 
 As an alternative you can install the module via modman.
-Please find more information about that installation method at https://github.com/colinmollenhour/modman
-(Thanks @colinmollenhour)
+Please find [more information](https://github.com/colinmollenhour/modman) about that installation method
+(thanks @colinmollenhour).
 
 We also offer paid installation services. If you are interested please contact me at support@vianetz.com.
 
 Uninstallation
 --------------
-1. Remove the folder app/code/community/Vianetz/CustomerUtilities
-2. Remove the file app/etc/modules/Vianetz/CustomerUtilities.xml
+1. Remove the folder `app/code/community/Vianetz/CustomerUtilities`
+2. Remove the file `app/etc/modules/Vianetz/CustomerUtilities.xml`
 
 Frequently Asked Questions
 --------------------------
@@ -60,15 +59,15 @@ contact me at https://www.vianetz.com/en/contacts or support@vianetz.com.
 Developer
 ---------
 Christoph Massmann
-[http://www.vianetz.com](http://www.vianetz.com)
+[https://www.vianetz.com](https://www.vianetz.com)
 [@vianetz](https://twitter.com/vianetz)
 
 Licence
 -------
-[GNU GENERAL PUBLIC LICENSE](http://www.gnu.org/licenses/gpl-2.0.txt)
+[GNU GENERAL PUBLIC LICENSE](http://www.gnu.org/licenses/gpl-3.0.txt)
 
 Copyright
 ---------
-(c) 2008-15 vianetz
+(c) since 2008 vianetz
 
 This Magento Extension uses Semantic Versioning - please find more information at http://semver.org.
