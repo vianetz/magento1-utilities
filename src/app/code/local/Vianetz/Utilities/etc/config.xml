@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<modules>
-		<Vianetz_Utilities>
-			<version>1.1.0</version>
-		</Vianetz_Utilities>
-	</modules>
+    <modules>
+        <Vianetz_Utilities>
+            <version>1.1.0</version>
+        </Vianetz_Utilities>
+    </modules>
     <global>
         <models>
             <vianetz_utilities>
@@ -15,6 +15,11 @@
                     <product>Vianetz_Utilities_Model_Catalog_Resource_Eav_Product</product>
                 </rewrite>
             </catalog_resource_eav_mysql4>
+            <adminhtml>
+                <rewrite>
+                    <url>Vianetz_Utilities_Model_Rewrite_Adminhtml_Url</url>
+                </rewrite>
+            </adminhtml>
         </models>
         <helpers>
             <vianetz_utilities>

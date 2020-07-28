@@ -16,7 +16,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <cache_block translate="label">
-                    <label>Cache: block cache configuration</label>
+                    <label>Cache: Block Cache Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>801</sort_order>
                     <show_in_default>1</show_in_default>
@@ -47,6 +47,26 @@
                         </cache_product_list_lifetime>
                     </fields>
                 </cache_block>
+                <admin_settings>
+                    <label>Admin Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <disable_sid_in_urls>
+                            <label>Disable SID in Admin Urls</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>This will disable appending the session id as query parameter SID for urls in Magento backend. This is e.g. required for Litespeed webserver to work correctly with uploads in backend.</comment>
+                        </disable_sid_in_urls>
+                    </fields>
+                </admin_settings>
             </groups>
         </vianetz_utilities>
     </sections>
