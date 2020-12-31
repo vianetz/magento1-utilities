@@ -9,12 +9,13 @@ Description
 -----------
 This module for the Magento online shop software offers several single small enhancements under one extension. The features itself are too small to release them as separate extensions.
 
-This extension includes the following features:
+This extension includes the **following features**:
 - Activate block caching for navigation, breadcrumbs and product list
 - Change costly getSortedAttributes() call
 - Add helper method to remove links from customer navigation
 - Helper method for referrer url
 - Possibility to disable SID session parameter in admin area e.g. for compatibility with Litespeed webserver
+- Fix issue with duplicate content of CMS pages with enabled store codes in url (by default CMS page is available at _/abc_ and _/store-code/abc_)
 
 Requirements
 ------------

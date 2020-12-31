@@ -47,6 +47,17 @@
                 </rewrite>
             </page>
         </blocks>
+        <events>
+            <cms_controller_router_match_before>
+                <observers>
+                    <vianetz_utilities_cms_noroute>
+                        <type>model</type>
+                        <class>vianetz_utilities/cmsNoRouteObserver</class>
+                        <method>run</method>
+                    </vianetz_utilities_cms_noroute>
+                </observers>
+            </cms_controller_router_match_before>
+        </events>
     </global>
     <adminhtml>
         <events>
